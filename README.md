@@ -11,6 +11,7 @@ Personal Claude Code skills.
 
 ```bash
 git clone git@github.com:kpollich/skills.git ~/.agents/skills-personal
-ln -s ../../.agents/skills-personal/run-spike ~/.claude/skills/run-spike
-ln -s ../../.agents/skills-personal/write-technical-content ~/.claude/skills/write-technical-content
+~/.agents/skills-personal/setup.sh
 ```
+
+`setup.sh` symlinks each skill directory into `~/.claude/skills/`. Re-running is safe — existing symlinks are skipped.
