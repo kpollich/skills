@@ -58,10 +58,13 @@ If no URL, ask them to paste the raw issue, ticket, Slack thread, or verbal desc
 
 ## Output
 
-Generate the issue using [TEMPLATE.md](TEMPLATE.md) exactly. Rules:
-- Omit Milestones for projects under 3 sprints.
-- Omit POC Proposal if no POC is warranted.
-- Open Questions is always present -- never omit it.
+Generate the issue using [TEMPLATE.md](TEMPLATE.md) (Project / Epic flavor). Rules:
+- **Word ceiling: ≤ 400 words** (excluding code blocks and URLs).
+- Default sections: Problem Statement, Goal, Acceptance Criteria, Open Questions, Open Risks.
+- Omitting sections is correct behavior, not a gap. Render Milestones or POC Proposal only if the engineer explicitly confirmed they apply.
 - Never leave placeholder text.
+- Apply all voice rules from [VOICE.md](VOICE.md).
 
-Before handing off, verify against the checklist in [QUALITY.md](QUALITY.md).
+See [../_shared/ISSUE_TEMPLATES.md](../_shared/ISSUE_TEMPLATES.md) for the full issue type family (Task, Bug, Enhancement). If the engineer's work clearly fits a different type, use that template instead.
+
+Before handing off, verify against every check in [QUALITY.md](QUALITY.md). If any check fails, revise before presenting.

@@ -4,58 +4,44 @@
 
 **Structure:** Summary (what + why, 1-3 bullets) → test plan (checklist) → optional notes.
 
-Title: imperative verb, ≤70 chars. Body: enough for a reviewer to understand scope and validate the change.
+Title: imperative verb, ≤ 70 chars. Body ≤ 200 words.
 
 **Bad:**
 > This PR adds some changes to fix the issue we were having with the enrollment flow.
 > I made several updates across multiple files to address the problems.
 > Please review and let me know if you have any feedback.
 
-**Good:**
+**Good:** *(~55 words)*
 > ## Summary
 > - Fix dangling session after mid-enrollment disconnect (closes #1234)
 > - Add 30s enrollment timeout with session cleanup hook
 >
 > ## Test plan
 > - [ ] Integration test: enrollment succeeds after prior attempt disconnected mid-flow
-> - [ ] No dangling sessions remain after enrollment timeout fires
+> - [ ] No dangling sessions after enrollment timeout fires
 > - [ ] Existing enrollment happy path unchanged
 
-**For larger PRs**, add a "How to review" section that routes reviewers to entry points or key decisions, not a walkthrough of every change.
+**For larger PRs**, add a "How to review" section routing reviewers to entry points or key decisions — not a walkthrough of every change.
 
 ---
 
 ## GitHub Issue
 
-**Structure:** Title (verb + outcome) → problem context → proposed solution or ask → acceptance criteria.
+See [../_shared/ISSUE_TEMPLATES.md](../_shared/ISSUE_TEMPLATES.md) for all four issue types:
+Project/Epic, Implementation Task, Bug, Enhancement.
+
+Title: verb + outcome, ≤ 70 chars. `##` headings throughout. Apply VOICE.md rules.
 
 **Bad title:** "Agent enrollment bug"
 **Good title:** "Fix crash when agent disconnects during enrollment"
 
-**Bad body:**
-> ## Background
-> We have been experiencing some issues with our enrollment flow. The enrollment flow is a critical
-> part of our agent lifecycle management. When agents enroll, they go through several steps...
->
-> ## Problem
-> Sometimes agents crash.
-
-**Good body:**
-> Agents that disconnect mid-enrollment leave a dangling session in Fleet Server, causing the next
-> enrollment attempt to fail with `409 Conflict`.
->
-> **Proposed fix:** Add a session cleanup hook to the enrollment timeout handler. If no heartbeat
-> arrives within 30s of enrollment start, expire the session.
->
-> **Acceptance criteria:**
-> - [ ] Enrollment succeeds after a prior attempt disconnected mid-flow
-> - [ ] No dangling sessions remain after enrollment timeout
+---
 
 ## Design Doc / RFC
 
-**Structure:** Problem statement → proposed solution → alternatives considered → tradeoffs → open questions.
+**Structure:** Problem → proposal → alternatives considered → tradeoffs → open questions.
 
-Assume the audience has context. Skip backstory they already know.
+Assume audience has context. No length cap — but every section earns its place.
 
 **Bad opening:**
 > ## Introduction
@@ -70,39 +56,18 @@ Assume the audience has context. Skip backstory they already know.
 > ## Proposal
 > Add per-tenant token bucket rate limiting at the API gateway layer.
 
-## Project Plan
-
-**Structure:** Goal → milestones (owner + date) → dependencies → risks → open questions.
-
-Cut prose. Use a table or list for milestones.
-
-**Bad:**
-> ## Overview
-> This project plan outlines our approach to migrating the auth middleware. The project will
-> be broken into several phases, each building on the previous one...
-
-**Good:**
-> **Goal:** Replace auth middleware to meet session token compliance requirements by Q2.
->
-> | Milestone | Owner | Target |
-> |---|---|---|
-> | New middleware passing integration tests | @alice | Mar 28 |
-> | Shadow mode in staging | @bob | Apr 11 |
-> | Production rollout (canary → full) | @alice | Apr 25 |
->
-> **Dependencies:** Security team sign-off on token storage design (pending).
-> **Risks:** Shadow mode may surface edge cases in legacy session format.
+---
 
 ## Status Update / Team Communication
 
-**Structure:** What changed → what's blocked → what's next. One sentence per item unless a blocker needs explanation.
+**Structure:** What changed → what's blocked → what's next. One sentence per item. ≤ 150 words.
 
 **Bad:**
 > ## Weekly Update
 > Hi team! Hope everyone had a great week. Here's a comprehensive update on our progress
 > across all workstreams. We've been making great strides on several fronts...
 
-**Good:**
+**Good:** *(~35 words)*
 > **Done:** Rate limiting deployed to staging. Load test passed at 2x expected peak.
 > **Blocked:** Production deploy waiting on SRE review — @charlie is out until Thursday.
 > **Next:** Write runbook for rate limit tuning. Start monitoring dashboard.

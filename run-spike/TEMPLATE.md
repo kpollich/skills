@@ -1,42 +1,42 @@
-# Issue Template
+# Issue Template — Project / Epic
 
-Use this template exactly when generating the final spike output.
+This skill produces the **Project / Epic** flavor. Full issue template family lives in
+[../_shared/ISSUE_TEMPLATES.md](../_shared/ISSUE_TEMPLATES.md).
+
+Default output: Problem Statement, Goal, Acceptance Criteria, Open Questions, Open Risks.
+Render Milestones only if the engineer confirmed it applies. Render POC Proposal only if confirmed.
+Never leave placeholder text.
 
 ## Problem Statement
-<!-- One paragraph. Who has this problem, why does it matter, what's broken or missing today. -->
+<!-- ≤ 50 words. Who has this, why now, what's broken/missing. -->
 
-## User Stories
-<!-- PM-owned ideally. Engineering fills in if absent. -->
-<!-- Format: As a [user], I want to [action] so that [outcome]. -->
-- As a ...
-
-## Goals
-<!-- What does success look like? What changes for the user or system when this is done? -->
-
-## Non-Goals
-<!-- What are we explicitly not doing? -->
+## Goal
+<!-- 1 sentence. What does done look like at the project level? -->
 
 ## Acceptance Criteria
-<!-- Testable and specific. If you can't write a test for it, rewrite it. -->
+<!-- ≤ 5 project-level outcomes. Will be broken into sub-issues. -->
+<!-- Each ≤ 15 words. Testable — if you can't write a test for it, rewrite it. -->
+<!-- Negative scope goes here too: "Does NOT support X in this iteration." -->
 - [ ]
-- [ ]
-
-## POC Proposal
-<!-- Propose the thinnest vertical slice of this work that can be built end-to-end in ~2 weeks. -->
-<!-- The goal is to shake out complexity, validate assumptions, and surface unknowns — not ship a feature. -->
-<!-- Link POC branch or doc if applicable. -->
 
 ## Open Questions
-<!-- Decisions and unknowns that need team alignment before production work begins. -->
-<!-- Format each as a standalone item so teammates can quote-reply in GitHub comments to discuss. -->
-<!-- Include cross-team dependencies here if any — name the team/person and what we need from them. -->
-- 
+<!-- Decisions that need team alignment before work starts. -->
+<!-- Each ≤ 25 words. Standalone so a teammate can quote-reply on GitHub. -->
+<!-- Cross-team dependencies go here: name the team/person and what we need. -->
+-
 
 ## Open Risks
-<!-- What's most likely to blow scope or cause problems mid-sprint? -->
+<!-- What's most likely to blow scope or cause problems mid-project? -->
+-
 
-## Out of Scope / Follow-ups
-<!-- Explicitly park known follow-ons here rather than letting them accumulate as implicit scope. -->
+---
+<!-- OPTIONAL — render only if engineer confirmed applicable: -->
 
 ## Milestones
-<!-- For projects > 3 sprints only. What does done look like at the 1/3 and 2/3 marks? -->
+<!-- Only if project > 3 sprints. Table with owner + target, or checklist of child issues. -->
+| Milestone | Sub-issue | Target |
+|---|---|---|
+
+## POC Proposal
+<!-- Thinnest vertical slice buildable end-to-end in ~2 weeks. -->
+<!-- Goal: shake out complexity and validate assumptions, not ship a feature. -->
