@@ -13,7 +13,7 @@ If over: cut content, don't compress sentences. Promote details to Open Question
 ## Structure
 
 - [ ] Title is verb + outcome, ≤ 70 chars.
-- [ ] First sentence states the change or ask — no preamble.
+- [ ] First sentence states the change or ask - no preamble.
 - [ ] No section duplicates another section.
 - [ ] No placeholder text remaining.
 

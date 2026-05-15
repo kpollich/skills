@@ -20,7 +20,7 @@ If any check fails: cut, don't compress. Promote excess to Open Questions or dro
 
 - [ ] Every AC is testable. "Works correctly" is not testable.
 - [ ] Each Open Question is a decision, not a research task. "We need to decide X," not "we need to look into X."
-- [ ] Each Open Question is standalone — a teammate can quote-reply on GitHub.
+- [ ] Each Open Question is standalone - a teammate can quote-reply on GitHub.
 - [ ] Cross-team dependencies named by team/person in Open Questions.
 
 ## Voice

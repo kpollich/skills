@@ -13,7 +13,7 @@ for skill_path in "$REPO_DIR"/*/; do
   if [[ -L "$target" ]]; then
     echo "skip (exists): $skill_name"
   elif [[ -e "$target" ]]; then
-    echo "skip (conflict): $skill_name — $target is not a symlink"
+    echo "skip (conflict): $skill_name - $target is not a symlink"
   else
     ln -s "$skill_path" "$target"
     echo "linked: $skill_name"

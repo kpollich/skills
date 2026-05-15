@@ -21,7 +21,7 @@ Title: imperative verb, ≤ 70 chars. Body ≤ 200 words.
 > - [ ] No dangling sessions after enrollment timeout fires
 > - [ ] Existing enrollment happy path unchanged
 
-**For larger PRs**, add a "How to review" section routing reviewers to entry points or key decisions — not a walkthrough of every change.
+**For larger PRs**, add a "How to review" section routing reviewers to entry points or key decisions - not a walkthrough of every change.
 
 ---
 
@@ -41,7 +41,7 @@ Title: verb + outcome, ≤ 70 chars. `##` headings throughout. Apply VOICE.md ru
 
 **Structure:** Problem → proposal → alternatives considered → tradeoffs → open questions.
 
-Assume audience has context. No length cap — but every section earns its place.
+Assume audience has context. No length cap - but every section earns its place.
 
 **Bad opening:**
 > ## Introduction
@@ -69,5 +69,5 @@ Assume audience has context. No length cap — but every section earns its place
 
 **Good:** *(~35 words)*
 > **Done:** Rate limiting deployed to staging. Load test passed at 2x expected peak.
-> **Blocked:** Production deploy waiting on SRE review — @charlie is out until Thursday.
+> **Blocked:** Production deploy waiting on SRE review - @charlie is out until Thursday.
 > **Next:** Write runbook for rate limit tuning. Start monitoring dashboard.

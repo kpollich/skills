@@ -1,4 +1,4 @@
-# Issue Template — Project / Epic
+# Issue Template - Project / Epic
 
 This skill produces the **Project / Epic** flavor. Full issue template family lives in
 [../_shared/ISSUE_TEMPLATES.md](../_shared/ISSUE_TEMPLATES.md).
@@ -15,7 +15,7 @@ Never leave placeholder text.
 
 ## Acceptance Criteria
 <!-- ≤ 5 project-level outcomes. Will be broken into sub-issues. -->
-<!-- Each ≤ 15 words. Testable — if you can't write a test for it, rewrite it. -->
+<!-- Each ≤ 15 words. Testable - if you can't write a test for it, rewrite it. -->
 <!-- Negative scope goes here too: "Does NOT support X in this iteration." -->
 - [ ]
 
@@ -30,7 +30,7 @@ Never leave placeholder text.
 -
 
 ---
-<!-- OPTIONAL — render only if engineer confirmed applicable: -->
+<!-- OPTIONAL - render only if engineer confirmed applicable: -->
 
 ## Milestones
 <!-- Only if project > 3 sprints. Table with owner + target, or checklist of child issues. -->

@@ -23,15 +23,15 @@ read, easy to act on, and free of AI bloat. Err on the side of too short.
 
 ## Length Contract
 
-Hard limits for short-format artifacts. If you're over, cut — don't compress.
+Hard limits for short-format artifacts. If you're over, cut - don't compress.
 
 | Format | Limit |
 |---|---|
 | PR description | ≤ 200 words |
-| GitHub issue — Project / Epic | ≤ 400 words |
-| GitHub issue — Implementation Task | ≤ 150 words |
-| GitHub issue — Bug | ≤ 200 words |
-| GitHub issue — Enhancement | ≤ 250 words |
+| GitHub issue - Project / Epic | ≤ 400 words |
+| GitHub issue - Implementation Task | ≤ 150 words |
+| GitHub issue - Bug | ≤ 200 words |
+| GitHub issue - Enhancement | ≤ 250 words |
 | Status update | ≤ 150 words |
 | Design doc / RFC | No cap |
 
@@ -61,11 +61,11 @@ regardless of format. Banned phrases and style rules apply to design docs and RF
 ## Workflow
 
 1. Identify format and audience. Skip this if already obvious from context.
-2. Identify the ask — what should readers do or decide after reading?
+2. Identify the ask - what should readers do or decide after reading?
 3. Collect facts. Ask for what's missing; don't invent.
 4. Draft using the matching structure from [EXAMPLES.md](EXAMPLES.md).
-5. Self-review against [QUALITY.md](QUALITY.md) — every check must pass before presenting.
-6. Present draft. Do not over-explain your choices — let the writing speak.
+5. Self-review against [QUALITY.md](QUALITY.md) - every check must pass before presenting.
+6. Present draft. Do not over-explain your choices - let the writing speak.
 
 ## When to Apply
 

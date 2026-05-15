@@ -14,4 +14,4 @@ git clone git@github.com:kpollich/skills.git ~/.agents/skills-personal
 ~/.agents/skills-personal/setup.sh
 ```
 
-`setup.sh` symlinks each skill directory into `~/.claude/skills/`. Re-running is safe — existing symlinks are skipped.
+`setup.sh` symlinks each skill directory into `~/.claude/skills/`. Re-running is safe - existing symlinks are skipped.
