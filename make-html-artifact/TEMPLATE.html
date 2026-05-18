@@ -1,0 +1,693 @@
+<!doctype html>
+<!--
+  make-html-artifact TEMPLATE
+  ============================================================
+  HOW TO USE THIS FILE:
+
+  1. COPY the entire <style> block verbatim into your output HTML.
+     Do NOT edit token values or class definitions.
+  2. REPLACE everything inside <body> with your composed content.
+     Use PATTERNS.md for block HTML recipes.
+  3. Keep the sticky header pattern and theme-toggle <script>.
+  4. Add Prism CDN scripts (bottom of <body>) only if artifact
+     contains <pre><code class="language-..."> blocks.
+  5. Add Mermaid CDN script only if artifact contains
+     <pre class="mermaid"> blocks.
+
+  TOKENS sourced from:
+  packages/eui-theme-borealis/src/eui_theme_borealis_light.json
+  packages/eui-theme-borealis/src/eui_theme_borealis_dark.json
+  (github.com/elastic/eui, Borealis theme)
+  ============================================================
+-->
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><!-- ARTIFACT TITLE --></title>
+  <style>
+    /* =====================================================
+       EUI BOREALIS DESIGN TOKENS
+       ===================================================== */
+
+    :root {
+      /* Brand / semantic colors */
+      --eui-color-primary:          #0B64DD;
+      --eui-color-accent:           #BC1E70;
+      --eui-color-accent-secondary: #008B87;
+      --eui-color-success:          #008A5E;
+      --eui-color-warning:          #FACB3D;
+      --eui-color-danger:           #C61E25;
+
+      /* Page / surface backgrounds */
+      --eui-page-bg:                #F6F9FC;
+      --eui-bg-plain:               #FFFFFF;
+      --eui-bg-subdued:             #F6F9FC;
+      --eui-header-bg:              #FFFFFF;
+
+      /* Panel backgrounds (semantic) */
+      --eui-panel-plain:            #FFFFFF;
+      --eui-panel-subdued:          #F6F9FC;
+      --eui-panel-primary:          #F1F6FF;
+      --eui-panel-success:          #E9FFF7;
+      --eui-panel-warning:          #FFF7E2;
+      --eui-panel-danger:           #FFF3F1;
+      --eui-panel-accent:           #FFF0F8;
+
+      /* Text */
+      --eui-color-text:             #1D2A3E;
+      --eui-color-title:            #111C2C;
+      --eui-color-text-subdued:     #516381;
+      --eui-color-link:             #0B64DD;
+
+      /* Semantic text (for callout headings, etc.) */
+      --eui-color-text-primary:     #1750BA;
+      --eui-color-text-success:     #09724D;
+      --eui-color-text-warning:     #6A4906;
+      --eui-color-text-danger:      #A71627;
+      --eui-color-text-accent:      #A11262;
+
+      /* Borders */
+      --eui-border-color:           #E3E8F2;
+      --eui-border-plain:           #CAD3E2;
+
+      /* Radius — Borealis is intentionally flat */
+      --eui-border-radius:          4px;
+
+      /* Spacing (base unit = 16px) */
+      --eui-size-xs:   4px;
+      --eui-size-s:    8px;
+      --eui-size-m:   12px;
+      --eui-size:     16px;
+      --eui-size-l:   24px;
+      --eui-size-xl:  32px;
+      --eui-size-xxl: 40px;
+
+      /* Typography */
+      --eui-font-family:      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+      --eui-code-font-family: 'Roboto Mono', 'Consolas', 'Menlo', 'Courier', monospace;
+
+      /* Font sizes */
+      --eui-font-size-xs:  12px;
+      --eui-font-size-s:   14px;
+      --eui-font-size:     14px;
+      --eui-font-size-m:   16px;
+      --eui-font-size-l:   20px;
+      --eui-font-size-xl:  24px;
+      --eui-font-size-xxl: 30px;
+
+      /* Font weights (450 = medium per Inter variable axis) */
+      --eui-font-weight-regular:  400;
+      --eui-font-weight-medium:   450;
+      --eui-font-weight-semibold: 500;
+      --eui-font-weight-bold:     600;
+
+      /* Shadows */
+      --eui-shadow-xs:
+        0px 0px 2px 0px hsl(216.67deg 29.51% 23.92% / 0.16),
+        0px 1px 4px 0px hsl(216.67deg 29.51% 23.92% / 0.06),
+        0px 2px 8px 0px hsl(216.67deg 29.51% 23.92% / 0.04);
+      --eui-shadow-s:
+        0px 0px 2px 0px hsl(216.67deg 29.51% 23.92% / 0.16),
+        0px 2px 7px 0px hsl(216.67deg 29.51% 23.92% / 0.08),
+        0px 4px 11px 0px hsl(216.67deg 29.51% 23.92% / 0.05);
+    }
+
+    /* Dark mode overrides */
+    [data-theme="dark"] {
+      --eui-color-primary:          #61A2FF;
+      --eui-color-accent:           #EE72A6;
+      --eui-color-accent-secondary: #16C5C0;
+      --eui-color-success:          #24C292;
+      --eui-color-warning:          #FACB3D;
+      --eui-color-danger:           #F6726A;
+
+      --eui-page-bg:                #07101F;
+      --eui-bg-plain:               #0B1628;
+      --eui-bg-subdued:             #07101F;
+      --eui-header-bg:              #0B1628;
+
+      --eui-panel-plain:            #0B1628;
+      --eui-panel-subdued:          #07101F;
+      --eui-panel-primary:          #0A2342;
+      --eui-panel-success:          #092A26;
+      --eui-panel-warning:          #2C2721;
+      --eui-panel-danger:           #351721;
+      --eui-panel-accent:           #351725;
+
+      --eui-color-text:             #CAD3E2;
+      --eui-color-title:            #E3E8F2;
+      --eui-color-text-subdued:     #98A8C3;
+      --eui-color-link:             #61A2FF;
+
+      --eui-color-text-primary:     #61A2FF;
+      --eui-color-text-success:     #24C292;
+      --eui-color-text-warning:     #FCD883;
+      --eui-color-text-danger:      #F6726A;
+      --eui-color-text-accent:      #EE72A6;
+
+      --eui-border-color:           #2B394F;
+      --eui-border-plain:           #485975;
+
+      --eui-shadow-xs:
+        0px 1px 4px 0px hsla(0, 0%, 0%, 0.40),
+        0px 2px 8px 0px hsla(0, 0%, 0%, 0.24);
+      --eui-shadow-s:
+        0px 2px 7px 0px hsla(0, 0%, 0%, 0.46),
+        0px 4px 11px 0px hsla(0, 0%, 0%, 0.26);
+    }
+
+    /* =====================================================
+       BASE RESET & DEFAULTS
+       ===================================================== */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--eui-font-family);
+      font-size: var(--eui-font-size);
+      line-height: 1.6;
+      background: var(--eui-page-bg);
+      color: var(--eui-color-text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--eui-color-link);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    p {
+      margin-bottom: var(--eui-size-m);
+      color: var(--eui-color-text);
+    }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: var(--eui-size-l);
+      margin-bottom: var(--eui-size-m);
+    }
+    li { margin-bottom: var(--eui-size-xs); }
+
+    h1 {
+      font-size: var(--eui-font-size-xxl);
+      font-weight: var(--eui-font-weight-bold);
+      color: var(--eui-color-title);
+      line-height: 1.2;
+      margin-bottom: var(--eui-size-m);
+    }
+    h2 {
+      font-size: var(--eui-font-size-xl);
+      font-weight: var(--eui-font-weight-bold);
+      color: var(--eui-color-title);
+      line-height: 1.3;
+      margin-top: var(--eui-size-xl);
+      margin-bottom: var(--eui-size-s);
+    }
+    h3 {
+      font-size: var(--eui-font-size-l);
+      font-weight: var(--eui-font-weight-bold);
+      color: var(--eui-color-title);
+      margin-top: var(--eui-size-l);
+      margin-bottom: var(--eui-size-s);
+    }
+    h4 {
+      font-size: var(--eui-font-size-m);
+      font-weight: var(--eui-font-weight-bold);
+      color: var(--eui-color-title);
+      margin-bottom: var(--eui-size-xs);
+    }
+
+    /* =====================================================
+       LAYOUT
+       ===================================================== */
+
+    .artifact-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 var(--eui-size-l);
+    }
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    .artifact-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--eui-header-bg);
+      border-bottom: 1px solid var(--eui-border-color);
+      box-shadow: var(--eui-shadow-xs);
+    }
+
+    .artifact-header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: var(--eui-size-m) var(--eui-size-l);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--eui-size-m);
+    }
+
+    .artifact-header-title {
+      font-size: var(--eui-font-size-m);
+      font-weight: var(--eui-font-weight-bold);
+      color: var(--eui-color-title);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .theme-toggle {
+      flex-shrink: 0;
+      background: none;
+      border: 1px solid var(--eui-border-color);
+      border-radius: var(--eui-border-radius);
+      padding: 3px var(--eui-size-s);
+      cursor: pointer;
+      font-size: var(--eui-font-size-xs);
+      font-family: var(--eui-font-family);
+      color: var(--eui-color-text-subdued);
+      line-height: 1.5;
+    }
+    .theme-toggle:hover {
+      background: var(--eui-bg-subdued);
+      border-color: var(--eui-border-plain);
+    }
+
+    /* =====================================================
+       MAIN CONTENT
+       ===================================================== */
+
+    .artifact-main {
+      padding: var(--eui-size-xl) 0 var(--eui-size-xxl);
+    }
+
+    /* =====================================================
+       EUI COMPONENTS
+       ===================================================== */
+
+    /* --- Panel --- */
+    .eui-panel {
+      background: var(--eui-panel-plain);
+      border-radius: var(--eui-border-radius);
+      padding: var(--eui-size-l);
+      margin-bottom: var(--eui-size-m);
+    }
+    .eui-panel--border {
+      border: 1px solid var(--eui-border-color);
+    }
+    .eui-panel--shadow {
+      box-shadow: var(--eui-shadow-s);
+    }
+    .eui-panel--subdued {
+      background: var(--eui-panel-subdued);
+    }
+    .eui-panel--primary {
+      background: var(--eui-panel-primary);
+    }
+    .eui-panel--success {
+      background: var(--eui-panel-success);
+    }
+    .eui-panel--warning {
+      background: var(--eui-panel-warning);
+    }
+    .eui-panel--danger {
+      background: var(--eui-panel-danger);
+    }
+    .eui-panel--accent {
+      background: var(--eui-panel-accent);
+    }
+
+    /* --- Callout --- */
+    .eui-callout {
+      padding: var(--eui-size-m) var(--eui-size-l);
+      border-left: 4px solid;
+      border-radius: var(--eui-border-radius);
+      margin-bottom: var(--eui-size-m);
+    }
+    .eui-callout-title {
+      font-size: var(--eui-font-size-m);
+      font-weight: var(--eui-font-weight-bold);
+      margin-bottom: var(--eui-size-xs);
+    }
+    .eui-callout--info {
+      background: var(--eui-panel-primary);
+      border-left-color: var(--eui-color-primary);
+    }
+    .eui-callout--info .eui-callout-title { color: var(--eui-color-text-primary); }
+    .eui-callout--warning {
+      background: var(--eui-panel-warning);
+      border-left-color: var(--eui-color-warning);
+    }
+    .eui-callout--warning .eui-callout-title { color: var(--eui-color-text-warning); }
+    .eui-callout--danger {
+      background: var(--eui-panel-danger);
+      border-left-color: var(--eui-color-danger);
+    }
+    .eui-callout--danger .eui-callout-title { color: var(--eui-color-text-danger); }
+    .eui-callout--success {
+      background: var(--eui-panel-success);
+      border-left-color: var(--eui-color-success);
+    }
+    .eui-callout--success .eui-callout-title { color: var(--eui-color-text-success); }
+
+    /* --- Badge --- */
+    .eui-badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: var(--eui-font-size-xs);
+      font-weight: var(--eui-font-weight-semibold);
+      padding: 2px var(--eui-size-s);
+      border-radius: 3px;
+      line-height: 1.4;
+      white-space: nowrap;
+    }
+    .eui-badge--primary  { background: var(--eui-panel-primary); color: var(--eui-color-text-primary); }
+    .eui-badge--success  { background: var(--eui-panel-success); color: var(--eui-color-text-success); }
+    .eui-badge--warning  { background: var(--eui-panel-warning); color: var(--eui-color-text-warning); }
+    .eui-badge--danger   { background: var(--eui-panel-danger);  color: var(--eui-color-text-danger); }
+    .eui-badge--accent   { background: var(--eui-panel-accent);  color: var(--eui-color-text-accent); }
+    .eui-badge--neutral  { background: var(--eui-bg-subdued);    color: var(--eui-color-text-subdued); border: 1px solid var(--eui-border-color); }
+
+    /* --- Stat --- */
+    .eui-stat {
+      display: flex;
+      flex-direction: column;
+      gap: var(--eui-size-xs);
+    }
+    .eui-stat-number {
+      font-size: var(--eui-font-size-xxl);
+      font-weight: var(--eui-font-weight-bold);
+      color: var(--eui-color-title);
+      line-height: 1;
+    }
+    .eui-stat-label {
+      font-size: var(--eui-font-size-xs);
+      font-weight: var(--eui-font-weight-bold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--eui-color-text-subdued);
+    }
+    .eui-stat-description {
+      font-size: var(--eui-font-size-s);
+      color: var(--eui-color-text-subdued);
+    }
+
+    /* --- Flex group --- */
+    .eui-flex-group {
+      display: flex;
+      gap: var(--eui-size-m);
+      flex-wrap: wrap;
+    }
+    .eui-flex-item          { flex: 1 1 0; min-width: 200px; }
+    .eui-flex-item--grow-0  { flex: 0 0 auto; }
+    .eui-flex-group--column { flex-direction: column; }
+    .eui-flex-group--align-center     { align-items: center; }
+    .eui-flex-group--justify-between  { justify-content: space-between; }
+    .eui-flex-group--wrap-none        { flex-wrap: nowrap; }
+
+    /* --- Steps --- */
+    .eui-steps {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--eui-size-m);
+    }
+    .eui-step {
+      display: flex;
+      gap: var(--eui-size-m);
+      align-items: flex-start;
+    }
+    .eui-step-number {
+      flex: 0 0 auto;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--eui-color-primary);
+      color: #fff;
+      font-size: var(--eui-font-size-xs);
+      font-weight: var(--eui-font-weight-bold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .eui-step-content { flex: 1 1 auto; }
+    .eui-step-title {
+      font-size: var(--eui-font-size-m);
+      font-weight: var(--eui-font-weight-bold);
+      color: var(--eui-color-title);
+      margin-bottom: var(--eui-size-xs);
+    }
+
+    /* --- Table --- */
+    .eui-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--eui-font-size-s);
+      margin-bottom: var(--eui-size-m);
+    }
+    .eui-table th {
+      text-align: left;
+      font-size: var(--eui-font-size-xs);
+      font-weight: var(--eui-font-weight-bold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--eui-color-text-subdued);
+      padding: var(--eui-size-s) var(--eui-size-m);
+      border-bottom: 2px solid var(--eui-border-plain);
+      white-space: nowrap;
+    }
+    .eui-table td {
+      padding: var(--eui-size-s) var(--eui-size-m);
+      border-bottom: 1px solid var(--eui-border-color);
+      color: var(--eui-color-text);
+      vertical-align: top;
+    }
+    .eui-table tr:last-child td { border-bottom: none; }
+    .eui-table tr:hover td { background: var(--eui-bg-subdued); }
+
+    /* --- Collapsible (details/summary) --- */
+    details.eui-collapsible {
+      border: 1px solid var(--eui-border-color);
+      border-radius: var(--eui-border-radius);
+      margin-bottom: var(--eui-size-m);
+      overflow: hidden;
+    }
+    details.eui-collapsible > summary {
+      padding: var(--eui-size-m) var(--eui-size-l);
+      cursor: pointer;
+      font-size: var(--eui-font-size-m);
+      font-weight: var(--eui-font-weight-bold);
+      color: var(--eui-color-title);
+      background: var(--eui-panel-plain);
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+    }
+    details.eui-collapsible > summary::-webkit-details-marker { display: none; }
+    details.eui-collapsible > summary::after {
+      content: '▸';
+      font-size: 11px;
+      color: var(--eui-color-text-subdued);
+      transition: transform 0.12s ease;
+    }
+    details.eui-collapsible[open] > summary::after { transform: rotate(90deg); }
+    details.eui-collapsible > summary:hover { background: var(--eui-bg-subdued); }
+    .eui-collapsible-body {
+      padding: var(--eui-size-l);
+      border-top: 1px solid var(--eui-border-color);
+      background: var(--eui-panel-plain);
+    }
+
+    /* --- Horizontal rule / spacers --- */
+    .eui-hr {
+      border: none;
+      border-top: 1px solid var(--eui-border-color);
+      margin: var(--eui-size-xl) 0;
+    }
+    .eui-spacer-xs  { height: var(--eui-size-xs); }
+    .eui-spacer-s   { height: var(--eui-size-s); }
+    .eui-spacer-m   { height: var(--eui-size-m); }
+    .eui-spacer-l   { height: var(--eui-size-l); }
+    .eui-spacer-xl  { height: var(--eui-size-xl); }
+
+    /* --- Title helpers --- */
+    .eui-title-xxxs { font-size: 12px; font-weight: var(--eui-font-weight-bold); color: var(--eui-color-title); line-height: 1.4; }
+    .eui-title-xxs  { font-size: 14px; font-weight: var(--eui-font-weight-bold); color: var(--eui-color-title); line-height: 1.4; }
+    .eui-title-xs   { font-size: 16px; font-weight: var(--eui-font-weight-bold); color: var(--eui-color-title); line-height: 1.4; }
+    .eui-title-s    { font-size: 20px; font-weight: var(--eui-font-weight-bold); color: var(--eui-color-title); line-height: 1.3; }
+    .eui-title-m    { font-size: 24px; font-weight: var(--eui-font-weight-bold); color: var(--eui-color-title); line-height: 1.2; }
+    .eui-title-l    { font-size: 30px; font-weight: var(--eui-font-weight-bold); color: var(--eui-color-title); line-height: 1.2; }
+
+    /* --- Text helpers --- */
+    .eui-text--subdued  { color: var(--eui-color-text-subdued); }
+    .eui-text--small    { font-size: var(--eui-font-size-s); }
+    .eui-text--xs       { font-size: var(--eui-font-size-xs); }
+    .eui-text--bold     { font-weight: var(--eui-font-weight-bold); }
+
+    /* =====================================================
+       CODE BLOCKS (Prism integration)
+       Token colors use EUI variables — adapts to dark mode.
+       Prism JS CDN only; no Prism CSS needed.
+       ===================================================== */
+
+    pre, code { font-family: var(--eui-code-font-family); }
+
+    /* Inline code */
+    code:not([class]) {
+      font-size: 0.875em;
+      background: var(--eui-bg-subdued);
+      border: 1px solid var(--eui-border-color);
+      border-radius: 3px;
+      padding: 0.1em 0.35em;
+      color: var(--eui-color-text);
+    }
+
+    /* Fenced code blocks */
+    pre[class*="language-"] {
+      background: var(--eui-bg-subdued);
+      border: 1px solid var(--eui-border-color);
+      border-radius: var(--eui-border-radius);
+      padding: var(--eui-size-l);
+      overflow-x: auto;
+      font-size: var(--eui-font-size-s);
+      line-height: 1.6;
+      margin-bottom: var(--eui-size-m);
+    }
+    code[class*="language-"] {
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: inherit;
+      color: var(--eui-color-text);
+    }
+
+    /* Prism token colors (EUI-palette, theme-aware) */
+    .token.comment,
+    .token.block-comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata               { color: var(--eui-color-text-subdued); font-style: italic; }
+
+    .token.punctuation         { color: var(--eui-color-text); }
+
+    .token.property,
+    .token.tag,
+    .token.deleted             { color: var(--eui-color-text-danger); }
+
+    .token.boolean,
+    .token.number              { color: var(--eui-color-accent); }
+
+    .token.selector,
+    .token.attr-name,
+    .token.string,
+    .token.char,
+    .token.builtin,
+    .token.inserted            { color: var(--eui-color-text-success); }
+
+    .token.atrule,
+    .token.attr-value,
+    .token.function,
+    .token.class-name          { color: var(--eui-color-text-primary); }
+
+    .token.keyword             { color: var(--eui-color-primary); font-weight: var(--eui-font-weight-semibold); }
+
+    .token.regex,
+    .token.important,
+    .token.operator,
+    .token.variable            { color: var(--eui-color-accent-secondary); }
+
+    .token.entity,
+    .token.url                 { color: var(--eui-color-link); }
+
+    /* =====================================================
+       MERMAID DIAGRAMS
+       ===================================================== */
+
+    .mermaid {
+      background: var(--eui-panel-plain);
+      border: 1px solid var(--eui-border-color);
+      border-radius: var(--eui-border-radius);
+      padding: var(--eui-size-l);
+      margin-bottom: var(--eui-size-m);
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY HEADER -->
+  <header class="artifact-header">
+    <div class="artifact-header-inner">
+      <span class="artifact-header-title"><!-- ARTIFACT TITLE --></span>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        ◐ Theme
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT — replace everything inside .artifact-wrap -->
+  <main class="artifact-main">
+    <div class="artifact-wrap">
+
+      <h1><!-- ARTIFACT TITLE --></h1>
+      <p class="eui-text--subdued eui-text--small"><!-- Subtitle or metadata: team, date, status badge --></p>
+
+      <div class="eui-spacer-l"></div>
+
+      <!-- === CONTENT GOES HERE ===
+           Use blocks from PATTERNS.md. Each section earns its visual treatment.
+           Plain prose sections: just <h2> + <p> tags. No panel wrapping needed.
+      -->
+
+    </div>
+  </main>
+
+  <!-- THEME TOGGLE SCRIPT (always include) -->
+  <script>
+    (function () {
+      var THEME_KEY = 'eui-artifact-theme';
+      var html = document.documentElement;
+      var btn  = document.getElementById('theme-toggle');
+
+      var saved = localStorage.getItem(THEME_KEY);
+      if (saved) html.setAttribute('data-theme', saved);
+
+      btn.addEventListener('click', function () {
+        var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem(THEME_KEY, next);
+      });
+    })();
+  </script>
+
+  <!-- PRISM (include only when artifact contains <pre><code class="language-..."> blocks)
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
+  -->
+
+  <!-- MERMAID (include only when artifact contains <pre class="mermaid"> blocks)
+       Note: diagram theme is set at page load. It does not follow the theme toggle.
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+    });
+  </script>
+  -->
+
+</body>
+</html>
