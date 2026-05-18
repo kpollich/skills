@@ -26,7 +26,7 @@ Interrogate with `/grill-me` before writing anything. Word limits apply to artif
 
 ## Word Limits
 
-Limits exist to prevent over-engineering. A 150-word task issue forces clarity; a 400-word epic forces prioritization. If you can't fit the problem, the problem isn't scoped yet — go back to `/grill-me`.
+Limits exist to prevent over-engineering. A 150-word task issue forces clarity; a 400-word epic forces prioritization. If you can't fit the problem, the problem isn't scoped yet. Go back to `/grill-me`.
 
 | Format | Limit |
 |---|---|
