@@ -19,7 +19,7 @@ If over: cut content, don't compress sentences. Promote details to Open Question
 
 ## Voice
 
-- [ ] No banned phrases (see [../run-spike/VOICE.md](../run-spike/VOICE.md)).
+- [ ] No banned phrases (see [VOICE.md](VOICE.md)).
 - [ ] No throat-clearing intro or concluding summary.
 - [ ] Imperative voice for actions ("Add X", not "We will add X").
 - [ ] No restating context the reader already has.

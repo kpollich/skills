@@ -65,6 +65,6 @@ Generate the issue using [TEMPLATE.md](TEMPLATE.md) (Project / Epic flavor). Rul
 - Never leave placeholder text.
 - Apply all voice rules from [VOICE.md](VOICE.md).
 
-See [../_shared/ISSUE_TEMPLATES.md](../_shared/ISSUE_TEMPLATES.md) for the full issue type family (Task, Bug, Enhancement). If the engineer's work clearly fits a different type, use that template instead.
+See [ISSUE_TEMPLATES.md](ISSUE_TEMPLATES.md) for the full issue type family (Task, Bug, Enhancement). If the engineer's work clearly fits a different type, use that template instead.
 
 Before handing off, verify against every check in [QUALITY.md](QUALITY.md). If any check fails, revise before presenting.

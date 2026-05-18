@@ -27,7 +27,7 @@ Title: imperative verb, ≤ 70 chars. Body ≤ 200 words.
 
 ## GitHub Issue
 
-See [../_shared/ISSUE_TEMPLATES.md](../_shared/ISSUE_TEMPLATES.md) for all four issue types:
+See [ISSUE_TEMPLATES.md](ISSUE_TEMPLATES.md) for all four issue types:
 Project/Epic, Implementation Task, Bug, Enhancement.
 
 Title: verb + outcome, ≤ 70 chars. `##` headings throughout. Apply VOICE.md rules.

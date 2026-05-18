@@ -1,7 +1,7 @@
 # Issue Template - Project / Epic
 
 This skill produces the **Project / Epic** flavor. Full issue template family lives in
-[../_shared/ISSUE_TEMPLATES.md](../_shared/ISSUE_TEMPLATES.md).
+[ISSUE_TEMPLATES.md](ISSUE_TEMPLATES.md).
 
 Default output: Problem Statement, Goal, Acceptance Criteria, Open Questions, Open Risks.
 Render Milestones only if the engineer confirmed it applies. Render POC Proposal only if confirmed.

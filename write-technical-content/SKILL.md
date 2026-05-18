@@ -55,7 +55,7 @@ quickly for their team format it this way?
 
 **One section, one job.** Every section has a distinct purpose. Overlapping sections get merged or cut.
 
-**Voice.** Apply all rules from [../run-spike/VOICE.md](../run-spike/VOICE.md) to all output,
+**Voice.** Apply all rules from [VOICE.md](VOICE.md) to all output,
 regardless of format. Banned phrases and style rules apply to design docs and RFCs too.
 
 ## Workflow
