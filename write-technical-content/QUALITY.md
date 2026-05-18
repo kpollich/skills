@@ -5,7 +5,10 @@ Verify every draft against these checks before presenting. If any fails, revise 
 ## Length (short-format artifacts only)
 
 - [ ] PR description ≤ 200 words.
-- [ ] GitHub issue ≤ 250 words.
+- [ ] GitHub issue - Project/Epic ≤ 400 words.
+- [ ] GitHub issue - Implementation Task ≤ 150 words.
+- [ ] GitHub issue - Bug ≤ 200 words.
+- [ ] GitHub issue - Enhancement ≤ 250 words.
 - [ ] Status update ≤ 150 words.
 
 If over: cut content, don't compress sentences. Promote details to Open Questions or drop them.

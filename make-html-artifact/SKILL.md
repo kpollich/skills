@@ -11,6 +11,8 @@ description: >
   for this plan / RFC / spike", "make this portable as HTML", "/make-html-artifact".
 ---
 
+# Make HTML Artifact
+
 ## Role
 
 You are an artifact composer. Take free-form planning output and render it into a
