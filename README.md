@@ -12,8 +12,7 @@ Interrogate with [`/grill-me`](https://github.com/mattpocock/skills/tree/main/gr
 
 **Align stakeholders on an initiative:**
 1. `/grill-me` - interrogate the initiative
-2. `/to-prd` (Matt Pocock) - produce a PRD
-3. `/make-html-artifact` - render it for sharing
+2. `/make-html-artifact` - render it for sharing
 
 **Write a PR description:**
 - `/write-technical-content` directly, no interrogation needed
@@ -23,8 +22,6 @@ Interrogate with [`/grill-me`](https://github.com/mattpocock/skills/tree/main/gr
 | What you need | Skill |
 |---|---|
 | GitHub issue / PR / design doc / status update | [`/write-technical-content`](./write-technical-content/) |
-| Product Requirements Document | [`/to-prd`](https://github.com/mattpocock/skills/tree/main/to-prd) (Matt Pocock) |
-| GitHub issues from a plan | [`/to-issues`](https://github.com/mattpocock/skills/tree/main/to-issues) (Matt Pocock) |
 | Portable HTML for sharing | [`/make-html-artifact`](./make-html-artifact/) |
 
 ## Word Limits
@@ -54,8 +51,6 @@ Interrogate with [`/grill-me`](https://github.com/mattpocock/skills/tree/main/gr
 |---|---|
 | [`/grill-me`](https://github.com/mattpocock/skills/tree/main/grill-me) | Interrogation primitive - resolves decision branches one question at a time |
 | [`/grill-with-docs`](https://github.com/mattpocock/skills/tree/main/grill-with-docs) | Like `/grill-me`, but also updates domain language docs |
-| [`/to-prd`](https://github.com/mattpocock/skills/tree/main/to-prd) | Synthesize a conversation into a PRD |
-| [`/to-issues`](https://github.com/mattpocock/skills/tree/main/to-issues) | Convert a plan into independently-grabbable GitHub issues |
 | [`/write-a-skill`](https://github.com/mattpocock/skills/tree/main/write-a-skill) | Create new skills with proper structure |
 | [`/diagnose`](https://github.com/mattpocock/skills/tree/main/diagnose) | Structured debugging for complex bugs |
 | [`/improve-codebase-architecture`](https://github.com/mattpocock/skills/tree/main/improve-codebase-architecture) | Identify architectural improvements |
