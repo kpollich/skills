@@ -2,11 +2,11 @@
 
 Personal Claude Code skills. Two-phase workflow: interrogate, then produce artifact.
 
-Interrogate with `/grill-me` before writing anything. Word limits apply to artifacts, not the conversation.
+Interrogate with [`/grill-me`](https://www.skills.sh/mattpocock/skills/grill-me) before writing anything.
 
 ## Workflows
 
-**Scope a project or spike:**
+**Scope + define a chunk of work:**
 1. `/grill-me` - interrogate the problem
 2. `/write-technical-content` - produce a GitHub issue
 
@@ -15,7 +15,7 @@ Interrogate with `/grill-me` before writing anything. Word limits apply to artif
 2. `/make-html-artifact` - render it for sharing
 
 **Write a PR description:**
-- `/write-technical-content` directly, no interrogation needed
+- `/write-technical-content` as the last step in implementation
 
 ## Artifact Reference
 
@@ -26,7 +26,7 @@ Interrogate with `/grill-me` before writing anything. Word limits apply to artif
 
 ## Word Limits
 
-Limits exist to prevent over-engineering. A 150-word task issue forces clarity; a 400-word epic forces prioritization. If you can't fit the problem, the problem isn't scoped yet. Go back to `/grill-me`.
+Limits exist to prevent over-engineering. A 150-word task issue forces clarity; a 400-word epic forces prioritization. If you can't fit the problem, the problem isn't scoped yet. Go back to `/grill-me` and break things out into chunks or phases.
 
 | Format | Limit |
 |---|---|
